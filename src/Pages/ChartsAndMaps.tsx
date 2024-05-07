@@ -15,8 +15,6 @@ import {
   Tooltip,
 } from "chart.js";
 
-import { MapContainer, TileLayer } from "react-leaflet";
-
 import WorldMap from "../Components/WorldMap";
 interface ChartsAndMaps {
   labels: string[];

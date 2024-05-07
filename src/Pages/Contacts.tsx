@@ -19,8 +19,6 @@ const Contacts = () => {
   let data = {};
   const AllContacts = useSelector((store: StoreState) => store.contacts);
   const dispatch = useDispatch();
-  // console.log(AllContacts)
-
   const togglePopup = (contact: any) => {
     setSingleContact(contact);
 
@@ -35,7 +33,7 @@ const Contacts = () => {
         </button>
       </div>
       {AllContacts.length === 0 && (
-        <div className=" m-auto w-fit p-4 align-middle text-blue-500 justify-center">
+        <div className=" m-auto w-fit p-4 align-middle text-green-500 justify-center">
           <svg
             className="m-auto"
             width="280"
