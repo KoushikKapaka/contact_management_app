@@ -20,6 +20,7 @@ function ContactForm() {
 
   function handleSave() {
     dispatch(addContact(form));
+    window.location.href = "/";
   }
 
   return (

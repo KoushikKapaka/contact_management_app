@@ -92,23 +92,7 @@ const Dashboard = () => {
         Corona Cases World Map
       </h1>
       <div className="border-2 border-blue-500 w-11/12  m-auto 5 auto 5">
-        <MapContainer
-          className="m-auto w-full  border-blue-700"
-          bounds={[
-            [-60, -180],
-            [85, 180],
-          ]}
-          zoom={2}
-          center={[20, 40]}
-          scrollWheelZoom={true}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-          />
-
-          <WorldMap countriesData={countriesData} />
-        </MapContainer>
+        <WorldMap countriesData={countriesData} />
       </div>
     </div>
   );

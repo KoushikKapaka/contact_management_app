@@ -40,10 +40,16 @@ function EditContact() {
 
   function handleSave() {
     dispatch(editContact({ ...form }));
+    window.location.href = "/";
   }
 
   useEffect(() => {
-    AllContact.filter((el: any) => el.id === id && setForm(el));
+    // eslint-disable-next-line eqeqeq
+    const contact = AllContact.find((el: any) => el.id == id);
+
+    if (contact) {
+      setForm(contact);
+    }
   }, [AllContact, id]);
 
   return (

@@ -104,7 +104,7 @@ const Contacts = () => {
                 <div className="text-left">
                   <p>First Name : {el.first_name}</p>
                   <p>Last Name : {el.last_name}</p>
-                  {/* <p>Mobile   : {el.mob}</p> */}
+                  <p>Mobile : {el.mob}</p>
                   <p>
                     Status : {el.status === "active" ? "Active" : "Inactive"}
                   </p>

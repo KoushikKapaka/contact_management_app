@@ -8,6 +8,8 @@ export default function reducer(state = initialState, action: any) {
   switch (action.type) {
     case ADD_CONTACT:
       {
+        console.log(action.payload);
+
         let flag = 0;
         if (
           action.payload.first_name === "" ||
@@ -31,7 +33,7 @@ export default function reducer(state = initialState, action: any) {
           alert("Contact Saved Successfully!!!");
 
           let updatedContacts =
-            JSON.parse(localStorage.getItem("contacts") ?? "") || [];
+            JSON.parse(localStorage.getItem("contacts") ?? "[]") || [];
           updatedContacts.push({
             id: state.contacts.length + 1,
             ...action.payload,
@@ -45,7 +47,7 @@ export default function reducer(state = initialState, action: any) {
       }
       break;
     case REMOVE_CONTACT: {
-      let Contacts = JSON.parse(localStorage.getItem("contacts") ?? "") || [];
+      let Contacts = JSON.parse(localStorage.getItem("contacts") ?? "[]") || [];
       let updatedContacts = Contacts.filter(
         (el: any) => el.id !== action.payload.id
       );
@@ -59,6 +61,8 @@ export default function reducer(state = initialState, action: any) {
     }
 
     case EDIT_CONTACT: {
+      console.log(action.payload);
+
       if (
         action.payload.first_name === "" ||
         action.payload.last_name === "" ||
